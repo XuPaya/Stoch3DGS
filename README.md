@@ -14,7 +14,7 @@
 
   <p align="center">
   <br>
-    <a href=""><strong>Project Page (Coming Soon)</strong></a>
+    <a href="https://xupaya.github.io/stochGRT/"><strong>Project Page</strong></a>
     |
     <a href=""><strong>Paper (Coming Soon)</strong></a>
   </p>
