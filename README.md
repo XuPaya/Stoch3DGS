@@ -38,7 +38,69 @@ We provide the following algorithms in our codebase:
 
 ## 3. Evaluations on MipNeRF360
 
-We provide scripts to reproduce results reported in our publication. All results are collected using a single **RTX 5880 Ada Generation** GPU.
+We provide scripts to reproduce results reported in our publication, and report detailed per-scene benchmark results. 
+
+<details>
+<summary><strong><a name="grt-benchmark">Results Produced on RTX 5090</a></strong></summary>
+<br/>
+
+## Evaluations on MipNeRF360
+
+***3DGRT (Baseline) Results***
+
+```bash
+bash ./benchmark/mipnerf360.sh apps/colmap_3dgrt.yaml
+bash ./benchmark/mipnerf360_render.sh results/mipnerf360
+```
+|           | PSNR  | SSIM	| Train (s) |
+|-----------|-------|-------|-------|
+| Bicycle   | 24.78	| 0.746	| 1738	|
+| Bonsai    | 31.59	| 0.938	| 3519	|
+| Counter   | 28.46	| 0.903	| 3294	|
+| Garden    | 26.95	| 0.849	| 1923	|
+| Kitchen   | 29.61	| 0.916	| 5004	|
+| Room      | 30.39	| 0.909	| 2629	|
+| Stump     | 26.46	| 0.771	| 1577	|
+| *Average* | 28.32	| 0.862	| 2812	|
+
+***Stochastic GRT Results***
+
+```bash
+bash ./benchmark/mipnerf360_stoch.sh apps/colmap_3dgrt_stoch.yaml
+bash ./benchmark/mipnerf360_render.sh results/mipnerf360_stoch/
+```
+|           | PSNR  | SSIM	| Train (s) |
+|-----------|-------|-------|-------|
+| Bicycle   | 24.51	| 0.725	| 1352	|
+| Bonsai    | 30.95	| 0.930	| 2335	|
+| Counter   | 28.20	| 0.893	| 2308	|
+| Garden    | 26.39	| 0.833	| 1409	|
+| Kitchen   | 29.45	| 0.903	| 2798	|
+| Room      | 29.89	| 0.905	| 1586	|
+| Stump     | 26.33	| 0.768	| 1258	|
+| *Average* | 27.96	| 0.851	| 1864	|
+
+***Quasi-Stochastic GRT Results***
+
+```bash
+bash ./benchmark/mipnerf360_quasistoch.sh apps/colmap_3dgrt_quasistoch.yaml
+bash ./benchmark/mipnerf360_render.sh results/mipnerf360_quasistoch/
+```
+|           | PSNR  | SSIM	| Train (s) |
+|-----------|-------|-------|-------|
+| Bicycle   | 24.61	| 0.727	| 1029	|
+| Bonsai    | 31.27	| 0.934	| 1679	|
+| Counter   | 28.21	| 0.897	| 1465	|
+| Garden    | 26.73	| 0.840	| 1105	|
+| Kitchen   | 29.58	| 0.909	| 1846	|
+| Room      | 30.35	| 0.909	| 1184	|
+| Stump     | 26.49	| 0.774	| 946	|
+| *Average* | 28.18	| 0.856	| 1322	|
+</details>
+
+<details>
+<summary><strong><a name="grt-benchmark">Results Produced on RTX 5880 Ada Generation</a></strong></summary>
+<br/>
 
 ***3DGRT (Baseline) Results***
 
@@ -90,3 +152,4 @@ bash ./benchmark/mipnerf360_render.sh results/mipnerf360_quasistoch/
 | Room      | 30.39	| 0.909	| 1765	|
 | Stump     | 26.50	| 0.774	| 1434	|
 | *Average* | 28.31	| 0.857	| 2011	|
+</details>
