@@ -16,7 +16,7 @@
   <br>
     <a href="https://xupaya.github.io/stochGRT/"><strong>Project Page</strong></a>
     |
-    <a href=""><strong>Paper (Coming Soon)</strong></a>
+    <a href="https://arxiv.org/abs/2603.23637"><strong>Paper</strong></a>
   </p>
 </p>
 
