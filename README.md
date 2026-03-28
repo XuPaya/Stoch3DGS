@@ -34,7 +34,7 @@ We provide the following algorithms in our codebase:
 
 - **Stochastic GRT**: The stochastic ray tracing algorithm proposed in our paper, which uses a stochastic sampling strategy for both the **forward** rendering and the backward gradient computation.
 
-- **Quasi-Stochastic GRT**: A variant of the stochastic ray tracing algorithm that uses **sorted** ray tracing for the **forward** pass and the **stochastic** strategy for the **backward** pass. Note that this algorithm was not included in the paper, but we provide it here for reference of optimal performance and future research.
+- **Quasi-Stochastic GRT**: A variant of the stochastic ray tracing algorithm that uses **sorted** ray tracing for the **forward** pass and the **stochastic** strategy for the **backward** pass. 
 
 ## 3. Evaluations on MipNeRF360
 
